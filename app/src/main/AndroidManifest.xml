@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mycompany.charliebookstore">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logocharliebookstore"
+        android:label="Charliebookstore"
+        android:roundIcon="@mipmap/logocharliebookstore_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CharlieBookstore"
+        tools:targetApi="31">
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.SoldProductsDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar"/>
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.SoldProductsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.OrderDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.CheckoutActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.EditAddAddressActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.AddressActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.CartListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.ProductDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.AddProductActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.UiComponentsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.UserProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CharlieBookstoreNoTopBar" />
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mycompany.charliebookstore.ui.activities.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

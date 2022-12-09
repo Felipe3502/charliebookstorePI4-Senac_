@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.UserProfileActivity"
+    android:background="@color/sand_dark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_user_profile_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_title_paddingStart"
+            android:paddingEnd="0dp"
+            android:text="Complete o seu usuario"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_user_profile_activity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/fl_user_image"
+                android:layout_width="@dimen/profile_user_image_size"
+                android:layout_height="@dimen/profile_user_image_size"
+                android:layout_marginTop="@dimen/profile_user_image_marginTop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_user_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/profile_user_photo_margin"
+                    android:background="@color/colorLightGrey"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_user_placeholder" />
+
+                <androidx.constraintlayout.widget.Placeholder
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/user_image_background" />
+            </FrameLayout>
+
+
+            <EditText
+                android:id="@+id/et_first_name"
+                style="@style/editText"
+                android:layout_width="334dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="30dp"
+                android:autofillHints=""
+                android:hint="Primeiro Nome"
+                android:inputType="textEmailAddress"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@id/guideLoginRight"
+                app:layout_constraintStart_toStartOf="@id/guideLoginLeft"
+                app:layout_constraintTop_toBottomOf="@+id/fl_user_image" />
+
+            <EditText
+                android:id="@+id/et_last_name"
+                style="@style/editText"
+                android:layout_width="334dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="30dp"
+                android:autofillHints=""
+                android:hint="Segundo Nome"
+                android:inputType="textEmailAddress"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@id/guideLoginRight"
+                app:layout_constraintStart_toStartOf="@id/guideLoginLeft"
+                app:layout_constraintTop_toBottomOf="@+id/et_first_name" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/editText"
+                android:layout_width="334dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="30dp"
+                android:autofillHints=""
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@id/guideLoginRight"
+                app:layout_constraintStart_toStartOf="@id/guideLoginLeft"
+                app:layout_constraintTop_toBottomOf="@+id/et_last_name" />
+
+            <EditText
+                android:id="@+id/et_mobile_number"
+                style="@style/editText"
+                android:layout_width="334dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="30dp"
+                android:autofillHints=""
+                android:hint="Numero de Telefone"
+                android:inputType="textEmailAddress"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@id/guideLoginRight"
+                app:layout_constraintStart_toStartOf="@id/guideLoginLeft"
+                app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_radio_button_height"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/btn_submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_mobile_number">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_gender_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Masculino"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_gender_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Feminino"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                style="@style/Button"
+                android:layout_marginTop="10dp"
+                android:text="Salvar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideLoginRight"
+                app:layout_constraintStart_toStartOf="@+id/guideLoginLeft"
+                app:layout_constraintTop_toBottomOf="@+id/rg_gender"
+                app:layout_constraintVertical_bias="0.087"
+                />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLoginLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="374dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLoginRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.91" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
